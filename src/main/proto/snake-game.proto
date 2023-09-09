@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "com.myCode.models";
+option java_package = "com.myCode.game";
 
 message Die {
   int32 value = 1;

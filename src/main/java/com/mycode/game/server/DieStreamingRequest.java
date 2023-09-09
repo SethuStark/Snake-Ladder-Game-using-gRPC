@@ -12,7 +12,7 @@ public class DieStreamingRequest implements StreamObserver<Die> {
 
     private Player client;
     private Player server;
-    private StreamObserver<GameState> gameStateStreamObserver;
+    private final StreamObserver<GameState> gameStateStreamObserver;
 
     public DieStreamingRequest(Player client, Player server, StreamObserver<GameState> gameStateStreamObserver) {
         this.client = client;

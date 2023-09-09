@@ -35,7 +35,7 @@ public class DieStreamingRequest implements StreamObserver<Die> {
 
     @Override
     public void onCompleted() {
-        this.gameStateStreamObserver.onCompleted();;
+        this.gameStateStreamObserver.onCompleted();
     }
 
     private GameState getGameState(){

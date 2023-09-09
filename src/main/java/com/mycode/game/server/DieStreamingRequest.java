@@ -1,5 +1,6 @@
 package com.mycode.game.server;
 
+import Model.SnakeAndLaddersMap;
 import com.myCode.game.Die;
 import com.myCode.game.GameState;
 import com.myCode.game.Player;
@@ -47,6 +48,7 @@ public class DieStreamingRequest implements StreamObserver<Die> {
 
     private Player getNewPlayerPosition(Player player, int dieCount){
         int position = player.getPosition() + dieCount;
+        position = SnakeAndLaddersMap.getPosition(position);
         if(position <= 100){
             player = player.toBuilder().setPosition(position).build();
         }
